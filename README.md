@@ -1,2 +1,2 @@
-# Heroes_of_Dreamland
-Hero collector web game 
+# Heroes of Dreamland
+## 2D action hero collecting RPG web game
