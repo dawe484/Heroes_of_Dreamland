@@ -8,7 +8,7 @@ export default {
         x._id = x._id.toString();
         return x;
       });
-    }
+    },
   },
   Mutation: {
     // args = { name }
@@ -16,6 +16,6 @@ export default {
       const kitty = await new Cat(args).save();
       kitty._id = kitty._id.toString();
       return kitty;
-    }
-  }
+    },
+  },
 };
