@@ -2,7 +2,7 @@ export default {
   Query: {
     getUserByUsername: async (parent, { username }, { User }) =>
       await User.findOne({ username }),
-    allUsers: async (parent, args, { User }) => {
+    getAllUsers: async (parent, args, { User }) => {
       // { _id: 123456, name: 'some name'}
       const users = await User.find();
       return users.map(user => {

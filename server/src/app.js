@@ -3,13 +3,14 @@ import bodyParser from 'body-parser';
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express';
 import { makeExecutableSchema } from 'graphql-tools';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import path from 'path';
 import { fileLoader, mergeTypes, mergeResolvers } from 'merge-graphql-schemas';
 
 import config from './configDB';
 
 // eslint-disable-next-line no-unused-vars
-// import User from './models/user';
+import User from './models/user';
 
 const typeDefs = mergeTypes(fileLoader(path.join(__dirname, './schema')));
 const resolvers = mergeResolvers(
@@ -21,17 +22,15 @@ const schema = makeExecutableSchema({
   resolvers,
 });
 
-const Cat = mongoose.model('Cat', {
-  name: String,
-});
-
-const User = mongoose.model('User', {
-  username: String,
-  email: String,
-});
+// const Cat = mongoose.model('Cat', {
+//   name: String,
+// });
 
 // Init App
 const app = express();
+
+// allow cross-origin requests
+app.use(cors());
 
 const graphqlEndpoint = '/graphql';
 
@@ -41,7 +40,7 @@ app.use(
   graphqlExpress({
     schema,
     context: {
-      Cat,
+      // Cat,
       User,
     },
   })
