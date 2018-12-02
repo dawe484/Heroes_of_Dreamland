@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Heroes of Dreamland",
+  "name": "2D action hero collecting RPG web game",
   "icons": [
     {
       "src": "favicon.ico",

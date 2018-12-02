@@ -1,0 +1,429 @@
+/* Main */
+
+.pimage1,
+.pimage2,
+.pimage3 {
+  position: relative;
+  opacity: 0.8;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* 
+    fixed = parallax
+    scroll = normal
+   */
+  background-attachment: fixed;
+}
+
+.pimage1 {
+  background-image: url(../../images/banner-bg.jpg);
+  min-height: 100vh;
+}
+
+.pimage2 {
+  background-image: url(../../images/game-brs-8-1920x1080.jpg);
+  min-height: 320px;
+}
+
+.pimage3 {
+  background-image: url(../../images/game-brs-2-1920x1006.jpg);
+  min-height: 320px;
+}
+
+.ptext {
+  position: absolute;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+}
+
+.pimage1 .ptext {
+  top: 50%;
+}
+
+.ptext > a {
+  justify-items: flex-start;
+}
+
+.read-more {
+  margin-top: 1rem;
+}
+
+section {
+  text-align: center;
+  /* padding: 50px 80px; */
+}
+
+#showcase h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+.container {
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Section A */
+
+.content-title {
+  margin-top: 0.5rem;
+  margin-bottom: 0rem;
+  font-size: 2.5rem;
+  /* text-transform: uppercase; */
+}
+
+.news-one {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  grid-column-gap: 2em;
+  padding-bottom: 2em;
+}
+
+.a-img .news-img {
+  position: relative;
+  display: block;
+  background: var(--purple); /* #160962; */
+}
+
+.a-img .news-img > img {
+  opacity: 0.5;
+}
+
+.a-img:hover .news-img > img {
+  opacity: 0.6;
+}
+
+.news-header {
+  display: grid;
+  grid-template-columns: 17fr minmax(120px, 6fr);
+}
+
+.news-title {
+  font-size: 2em;
+  padding-top: 0;
+}
+
+.news-title a:hover {
+  color: var(--redish);
+}
+
+.date {
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: auto;
+  margin-bottom: auto;
+  justify-self: end;
+}
+
+.news-description {
+  margin-bottom: 1rem;
+}
+
+.news-text .read-more {
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
+.news-text .read-more .btn {
+  font-size: 0.9em;
+}
+
+.pimage2 .ptext {
+  top: 25%;
+}
+
+.ptext h2 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+/* Section B */
+
+.media-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 2em;
+  grid-column-gap: 1em;
+}
+
+.media-card {
+  text-align: center;
+  margin-bottom: 1.2em;
+  font-size: 1.1em;
+  justify-self: center;
+}
+
+.a-img .img {
+  position: relative;
+  display: block;
+  background: var(--purple);
+}
+
+.a-img .img > img {
+  opacity: 0.85;
+}
+
+.a-img:hover .img > img {
+  opacity: 0.7;
+}
+
+.media-title {
+  margin-top: 0.5em;
+}
+
+/* Section C */
+
+#section-c .content-wrap,
+#section-e .content-wrap {
+  padding-top: 4em;
+  padding-bottom: 0.1em;
+}
+
+#section-c h2,
+#section-e h2 {
+  font-size: 2.2em;
+  text-transform: uppercase;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 3em;
+  grid-column-gap: 2em;
+}
+
+#section-c .card-content {
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  min-height: 100px;
+  padding: 1em 2em;
+  margin-bottom: 7em;
+}
+
+.card-content img {
+  width: 60px;
+  height: 60px;
+  left: 50%;
+  position: absolute;
+  margin-left: -35px;
+  bottom: -86px;
+  border: 3px solid var(--white);
+}
+
+.card-content p {
+  font-size: 0.9em;
+}
+
+.card-content small {
+  display: block;
+  color: var(--grey7);
+}
+
+.card-content small::before {
+  content: "\2014 \00A0";
+}
+
+.card-content::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -10px;
+  border-top: 10px solid rgba(255, 255, 255, 0.1);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.author-name {
+  text-align: right;
+  font-weight: 400;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+/* Section D */
+
+.a-img .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1.7em;
+  margin-left: -1.7em;
+  width: 4em;
+  height: 4em;
+  opacity: 0.3;
+}
+
+.a-img:hover .icon {
+  fill: var(--redish);
+  opacity: 0.8;
+}
+
+/* Section E */
+
+#section-e {
+  padding-bottom: 4em;
+}
+
+#section-e strong {
+  font-weight: 700;
+}
+
+.social-icons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 720px;
+}
+
+.social-icon {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 4em;
+  justify-self: center;
+}
+
+.social-icon > a {
+  display: inline-block;
+  padding: 25px 40px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* .social-icon > a:hover > svg { */
+.social-icon > a > svg:hover {
+  fill: var(--redish);
+}
+
+/* .social-icon > a:hover > span {
+  color: var(--redish);
+} */
+
+.social-icon > a span {
+  position: absolute;
+  display: block;
+  top: 110%;
+  left: 0;
+  right: 0;
+}
+
+.icon {
+  display: inline-block;
+  /* width: 3em; */
+  /* height: 3em; */
+  /* stroke-width: 0; */
+  /* stroke: currentColor; */
+  fill: currentColor;
+}
+
+@media (max-width: 647px) {
+  @media (orientation: landscape) {
+    .pimage1 .ptext {
+      top: 30%;
+    }
+  }
+
+  /* Section E */
+
+  .social-icons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 400px;
+  }
+
+  .twitch {
+    grid-column: 1/3;
+  }
+
+  .youtube {
+    grid-column: 3/5;
+  }
+
+  .twitter {
+    grid-column: 5/7;
+  }
+
+  .instagram {
+    grid-column: 2/4;
+  }
+
+  .facebook {
+    grid-column: 4/6;
+  }
+}
+
+/* Mobile 567 */
+
+@media (max-width: 567px) {
+  .pimage1,
+  .pimage2,
+  .pimage3 {
+    background-attachment: scroll;
+  }
+
+  .ptext {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .news-one {
+    grid-template-columns: 1fr;
+    padding-bottom: 0em;
+  }
+
+  @media (orientation: portrait) {
+    .news-text {
+      padding-top: 1em;
+    }
+  }
+
+  /* Section C */
+
+  #section-c .card-content {
+    min-height: 80px;
+  }
+
+  .info {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* margin-bottom: 3em; */
+  }
+
+  /* Section B, D */
+
+  .heroes,
+  .screenshots {
+    grid-column: 1/3;
+  }
+
+  .glyphs,
+  .artworks {
+    grid-column: 3/5;
+  }
+
+  .equip,
+  .wallpapers {
+    grid-column: 1/3;
+  }
+
+  .game-modes,
+  .videos {
+    grid-column: 3/5;
+  }
+
+  /* Section E */
+
+  #section-e h2 {
+    padding: 0em 0.5em;
+  }
+}

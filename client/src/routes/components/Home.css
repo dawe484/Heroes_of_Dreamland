@@ -1,0 +1,8 @@
+/* Body */
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  color: var(--white);
+  background: rgba(17, 3, 17, 0.9);
+}

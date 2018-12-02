@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
-const server = '127.0.0.1:27017'; // localhost
-const database = 'test';
+const server = 'leyzi:leyzi1@ds147181.mlab.com:47181'; // '127.0.0.1:27017'; // localhost
+const database = 'hod-db'; // 'test';
 
 mongoose.connect(`mongodb://${server}/${database}`).then(
   () => {

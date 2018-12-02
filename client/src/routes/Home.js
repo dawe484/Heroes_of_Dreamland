@@ -2,6 +2,8 @@ import React from 'react';
 import { Query, graphql } from 'react-apollo';
 import { gql } from 'apollo-boost';
 
+// import Header from './components/Header';
+
 const getAllUsersQuery = gql`
   {
     getAllUsers {
@@ -42,7 +44,7 @@ const Home = () => (
       return (
         <div>
           {data.getAllUsers.map(user => (
-            <h1 key={user.username}>{user.email}</h1>
+            <h1 key={user.username}>{`${user.username}: ${user.email}`}</h1>
           ))}
         </div>
       );
